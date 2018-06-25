@@ -39,16 +39,8 @@ public class MainActivity extends AppCompatActivity {
         adapter = new ReminderAdapter(reminders);
         recyclerView.setAdapter(adapter);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        final Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                addReminder();
-            }
-        });
     }
 
     public static final String EXTRA_DESCRIPTION = "fi.solita.reminders.DESCRIPTION";
